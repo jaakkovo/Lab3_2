@@ -37,6 +37,7 @@ Chip_GPIO_GetPinState(LPC_GPIO, 0,10)
 volatile int timer = 0;
 volatile int ms = 0;
 
+static enum { THIS, THAT } state;
 enum eventType { eEnter, eExit, eKey, eTick };
 struct event {
 	eventType type;
